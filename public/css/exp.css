@@ -1,0 +1,89 @@
+body{
+    background: #F2DC7F;
+    font-family: "微软雅黑", "Microsoft Yahei", "Hiragino Sans GB", tahoma, arial, "宋体";
+}
+
+#top{
+    position: absolute;
+    text-align: left;
+    top: 20px;
+    left:250px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+#main{
+    height:80%;width:80%;
+    position:fixed;
+    top:0;right:0;bottom:0;left:0;
+    margin:auto;
+}
+
+.level1{
+    float: left;
+    height: 100%
+}
+
+#left{
+    width: 30%;
+    padding: 50px;
+    background: #9DE380;
+    border-radius: 10px;
+}
+
+#edges{
+    min-height: 250px;
+}
+
+.div1{
+    margin-bottom: 15px;
+}
+
+.myBtn{
+    border-radius: 15px;
+    outline: none;
+    line-height: 45px;
+    font-weight: bold;
+    width: 75px;
+    border: none;
+    margin-left: 120px;
+    margin-top: 50px;
+}
+
+#center{
+    width: 50%;
+    background: whitesmoke;
+    border-radius: 10px;
+}
+
+#chart{
+    width: 650px;
+    height: 600px;
+    display: none;
+    border-radius: 10px;
+}
+
+#right{
+    width: 20%;
+    padding: 20px;
+    background: #99cccc;
+    border-radius: 10px;
+}
+
+#btns{
+    display: none;
+}
+
+.start{
+    width: 75px;
+    height: 50px;
+    line-height: 50px;
+    margin: 20px 0px 20px 80px;
+    border: none;
+    cursor: pointer;
+    user-select: none;
+    text-align: center;
+    border-radius: 15px;
+    font-weight: bold;
+    background: #ced4da;
+}

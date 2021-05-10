@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>题问知识人——个人创作中心</title>
+  <link href="../public/img/icon.png" rel="icon">
+  <link href="../public/css/personnelcenter.css" type="text/css" rel="stylesheet">
+  <script src="../node_modules/echarts/dist/echarts.js" type="text/javascript"></script>
+  <script src="../public/js/personnelcenter.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="top-fixed">
+  <div id="top-blank"></div>
+  <img src="../public/img/centerlogo.png" id="img">
+  <div id="dec01">
+    <div class="dec02">
+      <img class="img03" src="../public/img/notice.png">
+    </div>
+    <div class="dec02">
+      <img class="img03" src="../public/img/message.png">
+    </div>
+    <div class="dec02">
+      <img class="img04" src="../public/img/userimg.png">
+    </div>
+  </div>
+</div>
+<div id="blank1"></div>
+<div>
+  <div id="main">
+    <div id="container">
+      <div id="mainColumn">
+        <div id="columntop" class="columndiv">
+          <div style="padding:17px 0px 17px 0px">
+            <span class="span1">创作等级</span>
+            <span class="span2">最近一次更新：2020/12/27</span>
+            <span class="span3">创作等级说明&gt;</span>
+          </div>
+          <div id="level">
+            <img src="../public/img/level2.png">
+            <span class="span2">您的当前等级为Lv.2，还差 398 分即可升级为Lv.3</span>
+            <div style="position: relative">
+              <div class="hr"></div>
+              <div class="span4">102/500</div>
+            </div>
+          </div>
+        </div>
+        <div id="columnmid" class="columndiv">
+          <div id="mid-top">数据总览</div>
+            <div>
+              <div class="miditem">
+                <h5>回答总数</h5>1210
+              </div>
+              <div class="miditem">
+                <h5>阅读总数</h5>6900
+              </div>
+              <div class="miditem">
+                <h5>赞同总数</h5>780
+              </div>
+            </div>
+            <div>
+              <div class="miditem">
+                <h5>昨日阅读数</h5>43
+              </div>
+              <div class="miditem">
+                <h5>昨日赞同数</h5>12
+              </div>
+            </div>
+        </div>
+        <div id="columnbtm" class="columndiv">
+          <div class="btmUI">所有回答</div>
+          <div id="chartBar">
+            <div id="oneweek" class="chartbtu" onclick="chartex(0)">上周数据</div>
+            <div id="onemonth" class="chartbtu" onclick="chartex(1)">上月数据</div>
+          </div>
+          <div id="chart"></div>
+          <script>
+            document.getElementById('oneweek').style.background = '#96CFB2'
+          </script>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+  optionweek = {
+    title: {
+      text: '上周总览'
+    },
+    tooltip: {
+      trigger: 'axis',
+      axisPointer: {
+        type: 'cross',
+        label: {
+          backgroundColor: '#6a7985'
+        }
+      }
+    },
+    legend: {
+      right:28,
+      top:4,
+      data: ['阅读数', '评论数', '赞同数', '喜欢数', '收藏数']
+    },
+    toolbox: {
+      feature: {
+        saveAsImage: {}
+      }
+    },
+    grid: {
+      left: '3%',
+      right: '4%',
+      bottom: '3%',
+      containLabel: true
+    },
+    xAxis: [
+      {
+        type: 'category',
+        boundaryGap: true,
+        data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
+      }
+    ],
+    yAxis: [
+      {
+        type: 'value'
+      }
+    ],
+    series: [
+      {
+        name: '阅读数',
+        type: 'line',
+        label: {
+          normal: {
+            show: true,
+            position: 'top'
+          }
+        },
+        data: [20, 32, 61, 34, 90, 30, 70]
+      },
+      {
+        name: '评论数',
+        type: 'line',
+        data: [3, 2, 1, 4, 0, 0, 4]
+      },
+      {
+        name: '赞同数',
+        type: 'line',
+        data: [15, 12, 10, 15, 9, 7, 4]
+      },
+      {
+        name: '喜欢数',
+        type: 'line',
+        data: [12, 3, 11, 4, 9, 0, 0]
+      },
+      {
+        name: '收藏数',
+        type: 'line',
+        data: [5, 2, 11, 4, 0, 2, 4]
+      }
+    ]
+  };
+  optionyear = {
+    title: {
+      text: '去年总览'
+    },
+    tooltip: {
+      trigger: 'axis',
+      axisPointer: {
+        type: 'cross',
+        label: {
+          backgroundColor: '#6a7985'
+        }
+      }
+    },
+    legend: {
+      right:28,
+      top:4,
+      data: ['阅读数', '评论数', '赞同数', '喜欢数', '收藏数']
+    },
+    toolbox: {
+      feature: {
+        saveAsImage: {}
+      }
+    },
+    grid: {
+      left: '3%',
+      right: '4%',
+      bottom: '3%',
+      containLabel: true
+    },
+    xAxis: [
+      {
+        type: 'category',
+        boundaryGap: true,
+        data: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul','Aug','Sept','Oct','Nov','Dec']
+      }
+    ],
+    yAxis: [
+      {
+        type: 'value'
+      }
+    ],
+    series: [
+      {
+        name: '阅读数',
+        type: 'line',
+        label: {
+          normal: {
+            show: true,
+            position: 'top'
+          }
+        },
+        data: [330, 210, 270, 200, 123, 300, 250,200,310,157,270,156]
+      },
+      {
+        name: '评论数',
+        type: 'line',
+        data: [15, 20, 41, 15, 24, 12, 45,12,41,32,25,15]
+      },
+      {
+        name: '赞同数',
+        type: 'line',
+        data: [30, 45, 97, 50, 45, 87, 100,42,37,56,66,36]
+      },
+      {
+        name: '喜欢数',
+        type: 'line',
+        data: [36, 40, 80, 58, 50, 76, 94,61,45,46,56,30]
+      },
+      {
+        name: '收藏数',
+        type: 'line',
+        data: [20, 32, 11, 34, 30, 34, 20,25,36,27,45,12]
+      }
+    ]
+  };
+  let myChart = echarts.init(document.getElementById('chart'))
+  myChart.setOption(optionyear)
+  function chartex(id){
+    let elements = document.getElementsByClassName('chartbtu')
+    if(id==0){
+      myChart.setOption(optionweek)
+      elements[0].style.background = '#96CFB2'
+      elements[1].style.background = '#D3D3D3'
+    }else if (id==1){
+      myChart.setOption(optionyear)
+      elements[0].style.background = '#D3D3D3'
+      elements[1].style.background = '#96CFB2'
+    }
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,272 @@
+body{
+	margin: 0;
+	font-family: Arial,"Adobe 黑体 Std R";
+	background: #F0F0F0;
+}
+
+a{
+	cursor: pointer;
+}
+a:link {color: black} /* 未被访问的链接 蓝色 */
+a:visited {color: black} /* 已被访问过的链接 蓝色 */
+a:hover {color: #444445} /* 鼠标悬浮在上的链接 蓝色 */
+a:active {color: black} /* 鼠标点中激活链接 蓝色 */
+
+
+hr.style-one {
+	width: 100%;
+	margin: 0 auto;
+	border: 0;
+	height: 0;
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+	border-bottom: 0;
+}
+/*透明渐变水平线*/
+hr.style-two {
+	width: 80%;
+	margin: 0 auto;
+	border: 0;
+	height: 1px;
+	background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+/*渐变*/
+hr.style-three {
+	width: 80%;
+	margin: 0 auto;
+	border: 0;
+	height: 1px;
+	background: #333;
+	background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
+
+#top-fixed{
+	position:fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height:56px;
+	background: white;
+	z-index: 5;
+	box-shadow: 0 0 5px #777777;
+	font-weight: bold;
+}
+
+#top-blank{
+	width: 335px;
+	height: 100%;
+	float: left;
+}
+
+#img{
+	height: 56px;
+	width: auto;
+	float: left;
+}
+
+#shouye{
+	position: relative;
+	width: 70px;
+	height: 100%;
+	margin-right: 20px;
+	margin-left: 20px;
+	text-align: center;
+	line-height: 50px;
+	float: left;
+}
+
+#faxian{
+	position: relative;
+	text-align: center;
+	line-height: 50px;
+	width: 70px;
+	height: 100%;
+	margin-right: 20px;
+	float: left;
+}
+
+.topBtm{
+	position: absolute;
+	bottom: 0px;
+	left: 5px;
+	width: 60px;
+	height: auto;
+	display: none;
+}
+
+.top-div{
+	cursor: pointer;
+	color: #8590BA;
+}
+
+#search{
+	position: absolute;
+	left: 750px;
+	width: 250px;
+	height:41px;
+	float: left;
+	padding-top: 15px;
+	padding-left: 10px;
+}
+
+#img2{
+	position: absolute;
+	border-radius: 3px;
+	top: 10px;
+	left: 4px;
+	width: 245px;
+	height: 32px;
+	z-index: 1;
+}
+
+#searchText{
+	position: relative;
+	z-index: 5;
+	-web-kit-appearance:none;
+	-moz-appearance: none;
+	font-size:0.8em;
+	width: 200px;
+	height:1.7em;
+	border-radius:3px;
+	border:1px solid #c8cccf;
+	color:#6a6f77;
+	border: none;
+	outline: none;
+	background: rgba(255,255,255,255);
+}
+
+#imgSearch{
+	position: absolute;
+	z-index: 5;
+	left: 220px;
+	top:16px;
+	width: 20px;
+	height:auto;
+}
+
+#dec01{
+	position: absolute;
+	left: 1000px;
+	float: left;
+	margin-left:70px;
+	width: 150px;
+	height: 56px;
+}
+
+.dec02{
+	position: relative;
+	float: left;
+	width: 50px;
+	height: 56px;
+}
+
+.img03{
+	position: absolute;
+	top: 17px;
+	left: 5px;
+	width: 20px;
+	height: auto;
+	cursor: pointer;
+}
+
+.img04{
+	position: absolute;
+	top: 10px;
+	left: 5px;
+	width: 35px;
+	height: auto;
+	cursor: pointer;
+}
+
+#blank1{
+	width: 100%;
+	height: 56px;
+}
+
+#main{
+	width: 1536px;
+	min-height:100px ;
+}
+
+#container{
+	position: relative;
+	min-height: 100px;
+	padding-left: 350px;
+	padding-right: 350px;
+}
+
+#mainColumn{
+	width: 745px;
+	padding:10px 50px 10px 50px;
+	min-height: 50px;
+	z-index: 1;
+}
+
+#questionBar{
+	background: white;
+	padding-left:15px ;
+	padding-right: 15px;
+	border: white 1px solid;
+	box-shadow: 0 0 3px #777777;
+}
+
+#questionBar p{
+	font-size: 15px;
+	color: #9DA796;
+}
+
+#answersBar{
+	margin-top: 15px;
+	margin-bottom: 20px;
+	padding: 0px 15px 0px 15px;
+	height: 600px;
+	background: white;
+	border: white 1px solid;
+	box-shadow: 0 0 3px #777777;
+}
+
+#userPan{
+	position: relative;
+	padding-left: 67px;
+	line-height: 70px;
+	font-size: 17px;
+	font-weight: bold;
+}
+
+#userimg{
+	position: absolute;
+	top: 10px;
+	left: 5px;
+	width: 50px;
+	height: 50px;
+	border-radius: 5px;
+}
+
+#myanswer{
+	height: 460px;
+	width: 705px;
+	resize: none;
+	outline: none;
+	border: dimgray 1px solid;
+	border-radius: 4px;
+	font-size: 16px;
+}
+
+#functionBar{
+	height: 50px;
+	padding-left: 200px;
+}
+
+.answerBtu{
+	cursor: pointer;
+	margin: 5px 100px 15px 20px;
+	border-radius: 9px;
+	width: 100px;
+	height: 40px;
+	float: left;
+	background: #80AB59;
+	font-size: 17px;
+	font-weight: bold;
+	color: white;
+	text-align: center;
+	line-height: 40px;
+}
